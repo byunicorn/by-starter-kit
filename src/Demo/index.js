@@ -1,14 +1,18 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import './demo.scss';
 
-class Demo extends Component {
-    constructor(props) {
-        super(props);
-    }
+class Demo extends PureComponent {
+  componentDidMount() {
+    console.log('test');
+  }
 
-    render() {
-        return <div className="demo">This is a simple demo.</div>
-    }
+  render() {
+    return (
+      <div className="demo">
+        {'This is a simple demo.'}
+      </div>
+    );
+  }
 }
 
 export default Demo;
